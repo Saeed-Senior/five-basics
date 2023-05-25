@@ -1,0 +1,6 @@
+# GitHub Pages 404 redirect
+RewriteEngine On
+RewriteBase /five-basics/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /five-basics/index.html [L]
