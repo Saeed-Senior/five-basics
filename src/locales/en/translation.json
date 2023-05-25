@@ -1,0 +1,13 @@
+{
+   "main-text": "This app has 5 basic tools that can come in handy for everyday tasks.",
+   "todo": "To do list",
+   "author": "Author",
+   "write": "Write here...",
+   "timer": "Timer",
+   "stop": "stop",
+   "start": "start",
+   "reset": "reset",
+   "set-time": "set the time",
+   "close": "close",
+   "stopwatch": "stopwatch"
+}

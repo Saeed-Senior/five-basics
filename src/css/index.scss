@@ -1,0 +1,240 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container-main{
+   @apply max-w-[1220px] px-[10px] mx-auto
+}
+
+.gradient-header{
+   background: rgb(250,5,255);
+   background: linear-gradient(260deg, rgba(250,5,255,1) 0%, rgba(3,240,255,1) 100%);
+}
+
+.gradient-footer{
+   background: rgb(250,5,255);
+   background: linear-gradient(90deg, rgba(250,5,255,1) 0%, rgba(3,240,255,1) 100%);
+}
+
+.hexagon {
+   width: 200px;
+   height: 200px;
+   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+   @media(max-width:1240px){
+      width: calc(100px + (200 - 100) * ((100vw - 390px) / (1240 - 390)));
+      height: calc(100px + (200 - 100) * ((100vw - 390px) / (1240 - 390)));
+      }
+}
+.hexagon-inner {
+   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.border-hexagon1{
+background-color: #03F0FF;
+}
+
+.border-hexagon2{
+background-color: #FA05FF;
+}
+
+.bg-hexagon1{
+   &:hover{
+         background-color: rgba(3, 240, 255, 0.2);
+   }
+}
+
+.bg-hexagon2{
+   &:hover{
+         background-color: rgba(250, 5, 255, 0.2);
+   }
+}
+
+.hex{
+   margin-right: 20px;
+   @media(max-width:1240px){
+      margin-right: calc(10px + (20 - 10) * ((100vw - 390px) / (1240 - 390)));
+      }
+   &:last-child{
+      margin-right: 0;
+   }
+}
+
+.hex-flex{
+   margin-top: -30px;
+   @media(max-width:1240px){
+      margin-top: calc(-20px + (-30 - -20) * ((100vw - 390px) / (1240 - 390)));
+      }
+}
+
+//Counter
+
+.counter-btn{
+   @apply relative z-20 w-[130px] sm:w-[150px] h-[50px] flex items-center justify-center text-white font-medium text-[30px] transition active:duration-0 hover:duration-200;
+}
+
+.count{
+   @apply w-[25%] h-full flex items-center bg-slate-100 transition duration-200 hover:bg-slate-200 active:duration-0 active:bg-slate-300 justify-center cursor-pointer border-r;
+}
+
+.count-choise{
+   @apply relative cursor-pointer z-20 w-[50px] h-[50px] flex items-center justify-center text-white;
+}
+
+.count-list{
+   @apply absolute z-10 flex items-center justify-center border w-full h-full bg-white top-[100%] left-0 transition duration-200;
+}
+
+//Calculator
+
+.calc-btn{
+   @apply w-[75px] h-[75px] flex items-center justify-center border border-[#0D707D]
+}
+
+.calc-last-btn{
+   @apply w-[150px] h-[75px] flex items-center justify-center border border-[#0D707D]
+}
+
+.calc-operator{
+   @apply bg-[#03E4F2] hover:bg-[#1ad6e4] active:bg-[#10828a] active:duration-0 transition duration-500 text-white text-2xl font-semibold border-t-transparent
+}
+
+.calc-cookie{
+   @apply bg-[#9EFD03] hover:bg-[#9fe829] active:bg-[#4b6e13] active:duration-0 transition duration-500 text-white text-2xl font-semibold
+}
+
+.disp{
+   word-wrap: break-word;
+}
+
+//Timer
+
+.time-list::-webkit-scrollbar {
+   width: 3px;               /* ширина всей полосы прокрутки */
+}
+
+.time-list::-webkit-scrollbar-track {
+   background: transparent;        /* цвет зоны отслеживания */
+}
+
+.time-list::-webkit-scrollbar-thumb {
+   background-color: rgba(128, 128, 128, 0.1);    /* цвет бегунка */
+   border-radius: 20px;       /* округлось бегунка */
+   //border: 3px solid transparent;  /* отступ вокруг бегунка */
+}
+
+.timer-list-item{
+   @apply p-2 bg-slate-700 hover:bg-slate-800 active:bg-slate-900 active:duration-0 transition duration-200 flex items-center justify-center text-white cursor-pointer;
+}
+
+//loader
+
+.loader {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 10;
+   width: 160px;
+   height: 100px;
+   margin-left: -80px;
+   margin-top: -50px;
+   border-radius: 5px;
+   background: #1e3f57;
+   animation: dot1_ 3s cubic-bezier(0.55,0.3,0.24,0.99) infinite;
+}
+
+.loader:nth-child(2) {
+   z-index: 11;
+   width: 150px;
+   height: 90px;
+   margin-top: -45px;
+   margin-left: -75px;
+   border-radius: 3px;
+   background: #3c517d;
+   animation-name: dot2_;
+}
+
+.loader:nth-child(3) {
+   z-index: 12;
+   width: 40px;
+   height: 20px;
+   margin-top: 50px;
+   margin-left: -20px;
+   border-radius: 0 0 5px 5px;
+   background: #6bb2cd;
+   animation-name: dot3_;
+}
+
+@keyframes dot1_ {
+   3%,97% {
+      width: 160px;
+      height: 100px;
+      margin-top: -50px;
+      margin-left: -80px;
+   }
+
+   30%,36% {
+      width: 80px;
+      height: 120px;
+      margin-top: -60px;
+      margin-left: -40px;
+   }
+
+   63%,69% {
+      width: 40px;
+      height: 80px;
+      margin-top: -40px;
+      margin-left: -20px;
+   }
+}
+
+@keyframes dot2_ {
+   3%,97% {
+      height: 90px;
+      width: 150px;
+      margin-left: -75px;
+      margin-top: -45px;
+   }
+
+   30%,36% {
+      width: 70px;
+      height: 96px;
+      margin-left: -35px;
+      margin-top: -48px;
+   }
+
+   63%,69% {
+      width: 32px;
+      height: 60px;
+      margin-left: -16px;
+      margin-top: -30px;
+   }
+}
+
+@keyframes dot3_ {
+   3%,97% {
+      height: 20px;
+      width: 40px;
+      margin-left: -20px;
+      margin-top: 50px;
+   }
+
+   30%,36% {
+      width: 8px;
+      height: 8px;
+      margin-left: -5px;
+      margin-top: 49px;
+      border-radius: 8px;
+   }
+
+   63%,69% {
+      width: 16px;
+      height: 4px;
+      margin-left: -8px;
+      margin-top: -37px;
+      border-radius: 10px;
+   }
+}
