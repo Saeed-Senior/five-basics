@@ -8,10 +8,11 @@ function Footer() {
    const [t, i18n] = useTranslation();
 
    return (
-   <div className='absolute bottom-0 w-full -z-10 mt-[100px] bg-white'>
+   <div className='absolute bottom-0 w-full z-10 mt-[100px] bg-white'>
       <div className='relative py-[10px]'>
       <div className='container-main'>
-      <motion.div
+      <motion.a
+      href='https://github.com/Saeed-Senior'
       initial={{
          x: -50,
          opacity: 0
@@ -23,7 +24,7 @@ function Footer() {
       className='flex items-center space-x-2 justify-end'>
          <span>{t('author')}: Sayid</span>
          <img className='max-w-[45px] cursor-pointer' src={gh} alt="img" />
-      </motion.div>
+      </motion.a>
       </div>
       <div className="absolute inset-x-0 top-0 gradient-footer h-[1px]"></div>
       <motion.div
