@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/five-basics/static/css/main.f58a0900.css",
-    "main.js": "/five-basics/static/js/main.faeef076.js",
+    "main.css": "/five-basics/static/css/main.32077119.css",
+    "main.js": "/five-basics/static/js/main.a16f71b7.js",
     "static/media/repeat.png": "/five-basics/static/media/repeat.792effaeac6267108866.png",
     "index.html": "/five-basics/index.html",
-    "main.f58a0900.css.map": "/five-basics/static/css/main.f58a0900.css.map",
-    "main.faeef076.js.map": "/five-basics/static/js/main.faeef076.js.map"
+    "main.32077119.css.map": "/five-basics/static/css/main.32077119.css.map",
+    "main.a16f71b7.js.map": "/five-basics/static/js/main.a16f71b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.f58a0900.css",
-    "static/js/main.faeef076.js"
+    "static/css/main.32077119.css",
+    "static/js/main.a16f71b7.js"
   ]
 }
